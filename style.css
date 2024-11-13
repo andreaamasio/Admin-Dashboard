@@ -1,3 +1,10 @@
+:root {
+    /* brand colors */
+    --brand-1: #bae6fd;
+    --brand-2: #38bdf8;
+    --brand-3: #0369a1;
+    --brand-4: #082f49;
+}
 * {
     padding: 0;
     margin: 0;
@@ -14,6 +21,7 @@
 }
 .sidebar{
     grid-area: sidebar;
+    background-color: var(--brand-1);
 }
 .header {
     grid-area: header;
