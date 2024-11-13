@@ -18,7 +18,43 @@
 .header {
     grid-area: header;
 }
+.user-icon{
+    display: flex;
+    
+}
+
+/* main area with cards, announcements and trending sections */
 .main {
     grid-area: main;
-    outline: red;
+    outline: 1px solid red;
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    grid-template-rows: 40px 1fr 40px 1fr;
+    grid-template-areas: 
+    "cards-title announcements-title"
+    "cards announcements"
+    "cards trending-titles"
+    "cards trending"
+    ;
+}
+.main *{
+    outline:1px solid green
+}
+.cards.titles {
+    grid-area: cards-title;
+}
+.announcements.titles {
+    grid-area: announcements-title
+}
+.trending.titles {
+    grid-area: trending-titles;
+}
+.cards {
+    grid-area: cards;
+}
+.announcements {
+    grid-area: announcements;
+}
+.trending {
+    grid-area: trending;
 }
