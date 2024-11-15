@@ -13,7 +13,7 @@
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 0.5fr 3fr;
     grid-template-rows: 1fr 3fr;
     grid-template-areas: 
     "sidebar header"
@@ -102,23 +102,51 @@ div.avatar-big.greetings.username{
     ;
 }
 .main *{
-    outline:1px solid green
+    /* outline:1px solid green */
 }
 .cards.titles {
     grid-area: cards-title;
+    align-self: center;
+    color: var(--brand-3);
+    font-size: large;
+    font-weight: bold;
 }
 .announcements.titles {
-    grid-area: announcements-title
+    grid-area: announcements-title;
+    align-self: center;
+    color: var(--brand-3);
+    font-size: large;
+    font-weight: bold;
 }
 .trending.titles {
     grid-area: trending-titles;
+    color: var(--brand-3);
+    font-size: large;
+    font-weight: bold;
 }
 .cards {
     grid-area: cards;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 0.8fr));
+    gap: 15px;
+    background-color: lightgrey;
+    padding: 12px;
+}
+.card {
+    padding: 10px;    
+    border-left: 8px solid var(--brand-3);
+    border-radius: 10px;
+    outline: 1px solid grey;
+    background-color: white;    
+}
+.card-title {
+    font-weight: 800;
 }
 .announcements {
     grid-area: announcements;
+    padding: 12px;
 }
 .trending {
     grid-area: trending;
+    padding: 12px;
 }
