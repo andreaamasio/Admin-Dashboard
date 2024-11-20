@@ -27,13 +27,10 @@
 .header {
     grid-area: header;
 }
-/* .user-icon{
-    display: flex;
-    
-} */
+
 .header-1 {    
     display: grid;
-    outline: 1px solid purple;
+    
     grid-template-columns: 2fr 1fr;
 }
 .header-1 * {
@@ -64,19 +61,21 @@
     font-weight: 900;
     
 }
-
-div.avatar-big.greetings.username{
+.header-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    outline: 1px solid purple
+    
+}
+.header-2-1 {
     display: grid;
     grid-template-rows: 0.25fr 1fr;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 0.25fr 2fr;
     grid-template-areas: 
     "avatar-big greetings"
     "avatar-big username"
     ;
-    outline: 3px solid purple;
-    
-    
-}
+} 
 .avatar-big{
     grid-area: avatar-big;
     width: 40px;
