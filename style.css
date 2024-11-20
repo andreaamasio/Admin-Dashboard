@@ -14,7 +14,7 @@
 .container {
     display: grid;
     grid-template-columns: 0.5fr 3fr;
-    grid-template-rows: 1fr 3fr;
+    grid-template-rows: 0.45fr 3fr;
     grid-template-areas: 
     "sidebar header"
     "sidebar main"
@@ -63,9 +63,9 @@
 }
 .header-2 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    outline: 1px solid purple
+    grid-template-columns: 1.5fr 1fr;
     
+    padding: 10px
 }
 .header-2-1 {
     display: grid;
@@ -86,10 +86,20 @@
 .username {
     grid-area: username
 }
+.header-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+.header-buttons button{
+    min-width: 80px;
+    border-radius: 12px;
+    color: white;
+    background-color: var(--brand-3);
+}
 /* main area with cards, announcements and trending sections */
 .main {
     grid-area: main;
-    outline: 1px solid red;
+    
     display: grid;
     grid-template-columns: 2.5fr 1fr;
     grid-template-rows: 40px 1fr 40px 1fr;
