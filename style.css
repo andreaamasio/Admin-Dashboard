@@ -93,8 +93,10 @@
     grid-area: greetings;
     font-size: 12px;
 }
-.username {
-    grid-area: username
+.header-username{
+    grid-area: username;
+    font-weight: bold;
+    font-size: 1.3rem;
 }
 .header-buttons {
     display: flex;
@@ -111,16 +113,17 @@
 /* main area with cards, announcements and trending sections */
 .main {
     grid-area: main;
-    
     display: grid;
     grid-template-columns: 2.5fr 1fr;
-    grid-template-rows: 40px 1fr 40px 1fr;
+    grid-template-rows: 0.1fr 1fr 0.1fr 1fr;
     grid-template-areas: 
     "cards-title announcements-title"
     "cards announcements"
     "cards trending-titles"
     "cards trending"
     ;
+    background-color: lightgray;
+    
 }
 
 .cards.titles {
@@ -130,14 +133,14 @@
     font-size: large;
     font-weight: bold;
 }
-.announcements.titles {
+.announcements-titles {
     grid-area: announcements-title;
     align-self: center;
     color: var(--brand-3);
     font-size: large;
     font-weight: bold;
 }
-.trending.titles {
+.trending-titles {
     grid-area: trending-titles;
     color: var(--brand-3);
     font-size: large;
@@ -164,13 +167,22 @@
 .announcements {
     grid-area: announcements;
     padding: 12px;
-    display: flex;
+    display: grid;
     flex-direction: column;
     gap: 5%;
+    border-radius: 15px;
+    background-color: white;
+    margin-right: 10%;
 
 }
 .announcements-item {
     border-bottom: 1px solid gray;
+    padding: 3%;
+    font-size: 0.9rem;
+    
+}
+.announcements-item:last-of-type {
+    border-bottom: none;
     padding: 3%;
     font-size: 0.9rem;
 }
@@ -180,4 +192,38 @@
 .trending {
     grid-area: trending;
     padding: 12px;
+    display: grid;
+    
+    border-radius: 15px;
+}
+.announcements-titles,  .trending-titles, .trending {
+    
+    background-color: lightgrey;
+    padding: 12px;
+}
+.trending-items {
+    display: grid;
+    grid-template-columns:  0.4fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "avatar username"
+    "avatar username-long";
+    gap: 30px
+}
+.trending {
+    background-color: white;
+    display: grid;
+    margin-right: 10%;
+    grid-template-rows: repeat(4, 1fr);
+}
+.avatar-trending {
+    width: 40px;
+    grid-area: avatar;
+
+}
+.username {
+    grid-area: username;
+}
+.username-long {
+    grid-area: username-long;
 }
